@@ -14,8 +14,15 @@ public class User {
 	private String name;
 	private String email;
 	private String password;
-	private Integer permissionLevel;
-	
+	private PermissionLevel permissionLevel;
+
+
+	public PermissionLevel getPermissionLevel() {
+		return permissionLevel;
+	}
+	public void setPermissionLevel(PermissionLevel permissionLevel) {
+		this.permissionLevel = permissionLevel;
+	}
 	public String getUsername() {
 		return username;
 	}
@@ -40,12 +47,7 @@ public class User {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	public Integer getPermissionLevel() {
-		return permissionLevel;
-	}
-	public void setPermissionLevel(Integer permissionLevel) {
-		this.permissionLevel = permissionLevel;
-	}
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
