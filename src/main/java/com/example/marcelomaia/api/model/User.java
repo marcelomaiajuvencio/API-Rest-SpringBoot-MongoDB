@@ -1,5 +1,6 @@
 package com.example.marcelomaia.api.model;
 
+import org.bson.BsonType;
 import org.springframework.data.annotation.Id;
 
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -14,17 +15,25 @@ public class User {
 	private String name;
 	private String email;
 	private String password;
-	private PermissionLevel permissionLevel;
+	//@BsonRepresentation(BsonType.STRING)
+	//private PermissionLevel permissionLevel;
+	private String permissionLevel;
+// TODO implementar enum
 
-
-	public PermissionLevel getPermissionLevel() {
-		return permissionLevel;
-	}
-	public void setPermissionLevel(PermissionLevel permissionLevel) {
-		this.permissionLevel = permissionLevel;
-	}
+//	public PermissionLevel getPermissionLevel() {
+//		return permissionLevel;
+//	}
+//	public void setPermissionLevel(PermissionLevel permissionLevel) {
+//		this.permissionLevel = permissionLevel;
+//	}
 	public String getUsername() {
 		return username;
+	}
+	public String getPermissionLevel() {
+		return permissionLevel;
+	}
+	public void setPermissionLevel(String permissionLevel) {
+		this.permissionLevel = permissionLevel;
 	}
 	public void setUsername(String username) {
 		this.username = username;
